@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a {{app_name}}</title>
+    <link rel="stylesheet" href="css/email-styles.css">
+</head>
+<body class="email-body">
+    <table class="email-container" width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+            <td class="email-header">
+                <h1 class="email-title">¡Bienvenido a {{app_name}}!</h1>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="email-content">
+                <p class="email-text">Hola {{user_name}},</p>
+
+                <p class="email-text">Gracias por unirte a nuestra comunidad. Estamos encantados de tenerte con nosotros.</p>
+
+                <p class="email-text">Aquí tienes algunos enlaces que podrían interesarte:</p>
+
+                <table width="100%" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td align="center" class="email-padding">
+                            <a href="{{app_url}}" class="email-button">
+                                Comenzar a explorar
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+
+                <p class="email-text">Si tienes alguna pregunta, no dudes en contactarnos en {{support_email}}.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="email-footer">
+                <p class="footer-text">© {{ current_year }} {{ app_name }}. Todos los derechos reservados.</p>
+                <p class="footer-text1">Este es un mensaje automático</p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

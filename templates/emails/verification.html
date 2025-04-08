@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación de cuenta</title>
+    <!-- Solo para pre-procesamiento (será inlineado después) -->
+    <link rel="stylesheet" href="css/email-styles.css">
+</head>
+<body class="email-body">
+    <!--Contenedor principal-->
+    <table class="email-container" width="100%" cellspacing="0" cellpadding="0">
+        <!--Header-->
+        <tr>
+            <td class="email-header">
+                <h1 class="email-title">Verifica tu cuenta</h1>
+            </td>
+        </tr>
+
+        <!--Contenido-->
+        <tr>
+            <td class="email-content">
+                <p class="email-text">Hola,</p>
+
+                <p class="email-text">Gracias por registrarte. Por favor verifica tu dirección de email:</p>
+
+                <!--Boton de verificación-->
+                <table width="100%" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td align="center" class="email-padding">
+                            <a href="{{verification_url}}" class="email-button">
+                                Verificar mi email
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+
+                <!--Texto alternativo-->
+                <p class="email-text">Si el botón no funciona, copia y pega este enlace:</p>
+                
+                <p class="email-url">{{verification_url}}</p>
+
+                <p class="email-text">Si no solicitaste este registro, ignora este mensaje.</p>
+            </td>
+        </tr>
+
+        <!--Footer-->
+        <tr>
+            <td class="email-footer">
+                <p class="footer-text">© {{ current_year }} {{ app_name }}. Todos los derechos reservados.</p>
+                <p  class="footer-text1">Este es un mensaje automático</p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
